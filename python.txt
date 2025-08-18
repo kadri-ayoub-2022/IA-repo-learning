@@ -1,0 +1,30 @@
+len(string) ==> return length of string
+
+card_number = '4111-1111-4555-1142'
+card_translation = str.maketrans({'-': '', ' ': ''})
+translated_card_number= card_number.translate(card_translation)
+
+card_number_reversed = card_number[0:4:2] ==> take between 0 and 4 with step of 2
+
+example_list.insert(2, 5.5)
+
+lambda x: expr ==> anonymos function
+
+test = lambda x: x * 2
+print(list(map(test, [2, 3, 5, 8])))
+
+choice=input('Enter your choice: ')
+
+list_immutable = ("aasd",12,True)
+
+list() ==> enables you to build a list from an iterable.
+
+range(100) ==> une sequence de 0 a 99
+
+iterable = ['a', 'b', 'c']
+for i, j in enumerate(iterable):
+    print(i, j)  # 0 a   1 b    2 c
+
+-item["amount"] for item in cat.ledger if item["amount"] < 0
+
+row_str = [str(i) if i else '*' for i in row]

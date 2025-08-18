@@ -1,0 +1,83 @@
+sh file.sh || bash file.sh ==> run the script
+which bash ==> where the bash is located
+ 
+
+=======================================
+#!/bin/bash
+QUESTION1="What's your name?"
+echo $QUESTION1
+read NAME
+echo Hello $NAME.
+
+./file.sh arg1 arg2 arg3 ==>  $*  return all arguments
+
+if [[ $1 -gt 0 ]]
+then
+  : '
+  for (( i = $1; i >= 0; i-- ))
+  do
+    echo $i
+    sleep 1
+  done
+  '
+  I=$1
+  while [[ $I -ge 0 ]]
+  do
+    echo $I
+    (( I-- ))
+    sleep 1
+  done
+else 
+  echo Include a positive integer as the first argument.
+fi
+
+
+
+===========================================================
+#!/bin/bash
+
+# Program to tell a persons fortune
+
+echo -e "\n~~ Fortune Teller ~~\n"
+
+RESPONSES=("Yes" "No" "Maybe" "Outlook good" "Don't count on it" "Ask again later")
+N=$(( RANDOM % 6 ))
+
+GET_FORTUNE() {
+ if [[ ! $1 ]]
+ then
+  echo Ask a yes or no question:
+ else
+  echo "Try again. Make sure it ends with a question mark:" 
+ fi
+  read QUESTION
+}
+GET_FORTUNE
+until [[ $QUESTION =~ \?$ ]]
+do
+  GET_FORTUNE again
+done
+
+echo -e "\n${RESPONSES[$N]}"
+=========================================================
+echo hello >> file.txt ==>   append to the file
+bad_command 2> stderr.txt ==> redirect the error
+echo hello bash 1> stdout.txt  ==> redirect standarad output
+read NAME < name.txt ==> redirect input
+wc file ==> display how many line,words,bytes in the file
+grep --color	 '<pattern>' <filename ==>  searching for patterns in text   {-n with number of file}
+sed 's/<pattern_1>/<replacement_1>/i; s/<pattern_2>/<replacement_2>/g' <filename>
+grep -n 'meow[a-z]*' kitty_ipsum_2.txt | sed -E 's/([0-9]+).*/\1/' >> kitty_info.txt
+diff ==> is a command to view the difference between two files.
+
+
+case EXPRESSION in
+  PATTERN) STATEMENTS ;;
+  PATTERN) STATEMENTS ;;
+  PATTERN) STATEMENTS ;;
+  *) STATEMENTS ;;
+esac
+
+
+
+e2Zps@Cz8Rng5hu

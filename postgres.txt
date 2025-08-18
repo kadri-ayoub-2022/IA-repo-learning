@@ -1,0 +1,24 @@
+https://fr.scribd.com/document/782211043/Chap-1-Intro
+
+
+more file ==> show content of file
+find folder ==> show the tree of folder
+find -name index.html ==> search the path of the file
+
+======================================================================POSTGRESQL
+psql --username=freecodecamp --dbname=postgres ==> conect with db
+\l ==> show dbs
+\c database ==> connect to a database
+\d ==> display current table
+create table name(); ==> create new table
+alter table second_table rename column name to username;  ==> renaming a column 
+alter database first_database rename to mario_database; ==> renaming a db
+
+pg_dump --clean --create --inserts --username=freecodecamp students > students.sql ==> dump database in file(save all operations)
+psql -U postgres < students.sql ==> clone db in postgres
+
+
+
+_  in patter sql means any character
+
+ceil(avg(column))  == approximativement grand
