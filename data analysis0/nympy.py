@@ -41,8 +41,17 @@ np.random.random((6, 3))
 # a 3x3 table filled with random integers from 1 to 10
 np.random.randint(1, 10, size=(3, 3))
 
+np.full((2,2),4) # 2 x 2 with value of 4
+
 # multiplication of matrix : AC = np.dot(A,C) == A@C
+# np.matmul(a,b)  multiplication of matrix 
 
 #condition in matrix:  mtrix[matrix[:,2] > 25]
 
-#np.vstack((origin_array, new_info))  add new rows
+#np.vstack((origin_array, new_info))([v1,v2])  add new rows
+
+#np.identity(5)  identity matrix
+
+#np.linalg.det(a) determinant of matrix
+
+# a.reshape((2,1))
