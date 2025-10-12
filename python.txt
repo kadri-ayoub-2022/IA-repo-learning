@@ -28,3 +28,44 @@ for i, j in enumerate(iterable):
 -item["amount"] for item in cat.ledger if item["amount"] < 0
 
 row_str = [str(i) if i else '*' for i in row]
+
+
+
+
+-=====================================================================oop
+__dict__  ==>  python stocke les attributs dans cette variables
+
+__slots__ permet ==> limiter les attributs autorisés dans la classe
+
+__str__(self) ==> affichage d objet
+
+__del__(self) ==> deconstruct an object
+
+@property
+    def height(self):
+        return self.__height   ==>  getter
+
+@height.setter
+    def height(self, n):
+        self.__height = n  ==> setter
+
+
+__repr__ ==>  same as str
+
+dir() ===> list capabalities of object
+===================================================================json
+import json
+data = '''
+  [
+    { "id" : "001",
+      "x" : "2",
+     "name" : "Quincy"
+    } ,
+    { "id" : "009",
+      "x" : "7",
+      "name" : "Mrugesh"
+    }
+  ]
+'''
+info = json.loads(data)
+print(info[1]['name'])
